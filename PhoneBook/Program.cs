@@ -1,10 +1,21 @@
-﻿namespace PhoneBook
+﻿using PhoneBook.Models;
+using PhoneBook.ContactService;
+using System.Collections.Generic;
+using System;
+using PhoneBook.Services;
+
+namespace PhoneBook
 {
-    internal class Program
+    public class Program
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello Johhny");
+            ContactService contactService = new ContactService();
+            contactService.PopulateContact();
+            contactService.AddContact();
+            //contactService.CheckValideIndex();
+            contactService.ShowAllDates();
+
         }
     }
 }
